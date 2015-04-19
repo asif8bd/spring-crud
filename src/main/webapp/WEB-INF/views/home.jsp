@@ -40,6 +40,7 @@
 					<th>Student Name</th>
 					<th>Student Email</th>
 					<th>Update Info</th>
+					<th>Delete Info</th>
 				</tr>
 
 				<c:forEach var="row" items="${alldata}">
@@ -48,7 +49,10 @@
 						<td><c:out value="${row.studentName}" /></td>
 						<td><c:out value="${row.studentEmail}" /></td>
 						<td>
-							<a href="edit.html?studentId=${row.studentId}&studentName=${row.studentName}&studentEmail=${row.studentEmail}">Edit</a>
+							<a href="edit.html?studentId=${row.studentId}&studentName=${row.studentName}&studentEmail=${row.studentEmail}" class="btn btn-success" />Edit</a>
+						</td>
+						<td>
+							<a href="delete.html?studentId=${row.studentId}" class="btn btn-danger" />Delete</a>
 						</td>
 					</tr>
 				</c:forEach>

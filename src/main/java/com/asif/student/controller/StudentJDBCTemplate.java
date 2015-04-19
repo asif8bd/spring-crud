@@ -46,5 +46,11 @@ public class StudentJDBCTemplate implements StudentDAO {
 		
 
 	}
+	@Override
+	public void delete(Integer studentId) {
+		jdbcTemplate.update("delete from student where studentId ='"+studentId+"'");
+		
+
+	}
 
 }

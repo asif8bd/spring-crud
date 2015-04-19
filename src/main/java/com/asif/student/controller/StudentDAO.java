@@ -18,5 +18,6 @@ public interface StudentDAO {
 	public List<Student> listStudents();
 	
 	public void update(Integer studentId, String studentName, String studentEmail);
+	public void delete(Integer studentId);
 	
 }

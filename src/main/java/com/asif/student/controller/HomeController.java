@@ -82,4 +82,12 @@ public class HomeController {
 		
 		return "redirect:searchAll.html";
 	}
+
+	// Update customer Information
+	@RequestMapping(value = "delete.html", method = RequestMethod.GET)
+	public String deleteData(Student student, Model model) {
+		Integer id = Integer.parseInt(student.getStudentId());
+		dataBaseConnection.delete(id);
+		return "redirect:searchAll.html";
+	}
 }
