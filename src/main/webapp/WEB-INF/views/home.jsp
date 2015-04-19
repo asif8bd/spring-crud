@@ -6,22 +6,23 @@
 <link href="<c:url value="/resources/css/bootstrap.min.css" />"
 	rel="stylesheet">
 <link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
+<script src="<c:url value="/resources/js/script.js" />"></script>
 </head>
 <body>
 	<h2 class="container">Spring CRUD Example</h2>
 	<br />
 
 	<div class="container">
-		<form class="form-inline" method="post" action="insertStudent.html">
+		<form class="form-inline" method="post" action="insertStudent.html" name="myForm" onsubmit="return validateInputForm()">
 			<div class="form-group">
-				<label for="name"> Student Name</label> <input type="text"
-					name="studentName" class="form-control" id="name"
-					placeholder="Jane Doe">
+				<label for="studentName"> Student Name</label> <input type="text"
+					name="studentName" class="form-control" id="studentName"
+					placeholder="Jane Doe" required="required">
 			</div>
 			<div class="form-group">
-				<label for="email">Student Email</label> <input type="email"
-					class="form-control" id="email" name="studentEmail"
-					placeholder="jane.doe@example.com">
+				<label for="studentEmail">Student Email</label> <input type="email"
+					class="form-control" id="studentEmail" name="studentEmail"
+					placeholder="jane.doe@example.com" required="required">
 			</div>
 			<button type="submit" class="btn btn-success">Save</button>
 			<span style="color: green;">${message}</span>
